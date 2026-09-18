@@ -2,13 +2,13 @@ import type { AnchorHTMLAttributes, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-md font-display uppercase tracking-[0.16em] text-xs transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background";
+  "inline-flex items-center justify-center gap-2 rounded-sm font-display uppercase tracking-[0.12em] text-sm transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background";
 
 const variants = {
   primary:
-    "bg-sunset text-primary-foreground px-6 py-3 shadow-card hover:brightness-110 hover:-translate-y-0.5",
+    "relative bg-primary text-primary-foreground px-7 py-3.5 shadow-[6px_6px_0_var(--color-leather)] hover:-translate-y-0.5 hover:brightness-110 active:translate-x-1 active:translate-y-1 active:shadow-none",
   outline:
-    "border border-border bg-transparent text-foreground px-6 py-3 hover:border-primary hover:text-primary",
+    "border-2 border-border bg-background/40 text-foreground px-7 py-3 hover:border-primary hover:text-primary",
   ghost: "text-muted-foreground px-3 py-2 hover:text-primary",
   quiet:
     "border border-border bg-secondary text-secondary-foreground px-4 py-2 hover:border-primary hover:text-primary",
@@ -48,7 +48,7 @@ export function SectionHeading({
       )}
     >
       {kicker ? <p className="text-kicker">{kicker}</p> : null}
-      <h2 className="mt-3 text-3xl uppercase leading-tight sm:text-4xl">
+      <h2 className="mt-3 text-4xl uppercase leading-none sm:text-6xl">
         {title}
       </h2>
       {subtitle ? (
@@ -72,7 +72,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={cn("scroll-mt-20 px-5 py-20 sm:px-8 sm:py-24", className)}
+       className={cn("desert-contours scroll-mt-20 border-b border-border/60 px-5 py-20 sm:px-8 sm:py-28", className)}
     >
       <div className="mx-auto w-full max-w-6xl">{children}</div>
     </section>

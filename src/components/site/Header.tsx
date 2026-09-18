@@ -23,10 +23,10 @@ export function Header() {
           : "border-b border-transparent",
       )}
     >
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-3 sm:px-8">
         <a
           href="#home"
-          className="font-display text-lg uppercase tracking-[0.3em] text-foreground"
+          className="border-l-4 border-primary pl-3 font-display text-2xl uppercase tracking-[0.08em] text-foreground"
         >
           Simuverse
         </a>
@@ -36,7 +36,7 @@ export function Header() {
             <a
               key={l.href}
               href={l.href}
-              className="font-display text-xs uppercase tracking-[0.2em] text-muted-foreground transition-colors hover:text-primary"
+              className="border-b border-transparent font-display text-sm uppercase tracking-[0.1em] text-muted-foreground transition-colors hover:border-primary hover:text-primary"
             >
               {l.label}
             </a>

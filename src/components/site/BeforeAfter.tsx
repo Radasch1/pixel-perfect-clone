@@ -36,7 +36,7 @@ export function BeforeAfter() {
           }}
           onPointerMove={(e) => dragging.current && move(e.clientX)}
           onPointerUp={() => (dragging.current = false)}
-          className="relative mt-12 select-none overflow-hidden rounded-md border border-border shadow-lift"
+          className="relative mt-12 select-none overflow-hidden rounded-sm border-4 border-leather shadow-lift"
           style={{ touchAction: "pan-y" }}
         >
           <ScreenshotSlot
