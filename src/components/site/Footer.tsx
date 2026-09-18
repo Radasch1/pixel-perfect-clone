@@ -3,11 +3,11 @@ import { ActionLink, FacebookIcon } from "./ui";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-dusk px-5 py-14 sm:px-8">
+    <footer className="border-t-[6px] border-leather bg-dusk px-5 py-14 sm:px-8">
       <div className="mx-auto w-full max-w-6xl">
         <div className="grid gap-10 sm:grid-cols-3">
           <div>
-            <p className="font-display text-lg uppercase tracking-[0.3em]">Simuverse</p>
+            <p className="font-display text-3xl uppercase tracking-[0.08em] text-primary">Simuverse</p>
             <p className="mt-3 max-w-xs text-sm text-muted-foreground">
               Realistic graphics for the American Truck Simulator experience.
             </p>

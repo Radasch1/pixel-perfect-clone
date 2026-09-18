@@ -29,7 +29,7 @@ export function About() {
   return (
     <>
       <Section id="about" className="bg-dusk">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <Reveal>
             <SectionHeading
               kicker="About"
@@ -79,7 +79,7 @@ export function About() {
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {benefits.map((b, i) => (
             <Reveal key={b.title} delay={(i % 4) * 80}>
-              <div className="h-full rounded-md border border-border bg-card p-6 shadow-card transition-colors duration-300 hover:border-primary/60">
+              <div className="h-full border-t-4 border-primary bg-card p-6 shadow-card transition-colors duration-300 hover:border-accent">
                 <svg viewBox="0 0 24 24" className="h-6 w-6 text-primary" fill="none" stroke="currentColor" strokeWidth="1.3">
                   <path d={b.path} />
                 </svg>

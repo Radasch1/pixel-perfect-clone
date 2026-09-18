@@ -35,10 +35,10 @@ function Index() {
       <Header />
       <main>
         <Hero />
-        <BrandStatement />
         <Featured />
-        <Gallery />
         <BeforeAfter />
+        <BrandStatement />
+        <Gallery />
         <About />
         <Reviews />
         <Support />

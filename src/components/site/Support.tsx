@@ -64,7 +64,9 @@ export function Support() {
         </Reveal>
 
         <Reveal delay={120}>
-          <div className="flex h-full flex-col justify-center rounded-md border border-border bg-card p-8 shadow-card sm:p-10">
+          <div className="relative flex h-full flex-col justify-center overflow-hidden border-l-[6px] border-primary bg-card p-8 shadow-card sm:p-10">
+            <div className="absolute right-0 top-0 h-full w-1/3 skew-x-[-18deg] bg-primary/10" />
+            <div className="relative">
             <p className="text-kicker">Support Simuverse</p>
             <h3 className="mt-3 text-2xl uppercase leading-tight sm:text-3xl">
               Keep the presets rolling
@@ -84,6 +86,7 @@ export function Support() {
             <p className="mt-4 text-xs text-muted-foreground/70">
               Secure payment handled through PayPal.
             </p>
+            </div>
           </div>
         </Reveal>
       </div>

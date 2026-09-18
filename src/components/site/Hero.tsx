@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ScreenshotSlot } from "./ScreenshotSlot";
 import { ActionLink } from "./ui";
+import heroImage from "@/assets/mojave-truck-hero.jpg";
 
 export function Hero() {
   const [offset, setOffset] = useState(0);
@@ -12,22 +13,23 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative overflow-hidden pt-28 sm:pt-32">
-      <div className="pointer-events-none absolute inset-0 bg-dusk" />
-      <div className="texture-grain-layer pointer-events-none absolute inset-0 opacity-70" />
+    <section id="home" className="relative flex min-h-[82vh] items-end overflow-hidden border-b-[6px] border-leather pt-28">
+      <img src={heroImage} alt="Semi truck crossing the Mojave desert at dusk" className="absolute inset-0 h-full w-full object-cover" />
+      <div className="pointer-events-none absolute inset-0 bg-scrim" />
+      <div className="texture-grain-layer pointer-events-none absolute inset-0 opacity-60" />
 
-      <div className="relative mx-auto w-full max-w-6xl px-5 pb-16 sm:px-8 sm:pb-20">
-        <p className="text-kicker">American Truck Simulator · Graphics Presets</p>
-        <h1 className="mt-4 max-w-3xl text-4xl uppercase leading-[1.05] sm:text-6xl">
-          Realistic Graphics.
-          <span className="block text-primary">Authentic Trucking.</span>
+      <div className="relative mx-auto w-full max-w-6xl px-5 pb-24 text-center sm:px-8 sm:pb-28">
+        <p className="mx-auto inline-block border border-primary bg-background/80 px-4 py-1 text-kicker shadow-card">American Truck Simulator · Graphics Presets</p>
+        <h1 className="mt-6 text-[clamp(5rem,15vw,11rem)] uppercase leading-[0.78] text-foreground [text-shadow:0_10px_30px_var(--background)]">
+          Simuverse
+          <span className="mt-5 block text-[clamp(2rem,5vw,4.5rem)] leading-none text-primary">Realistic Graphics. Authentic Trucking.</span>
         </h1>
-        <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+        <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-foreground/80 sm:text-lg">
           Take American Truck Simulator to the next level with realistic
           graphics presets built for immersive, authentic trucking.
         </p>
 
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+        <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
           <ActionLink href="#graphics" className="w-full sm:w-auto">
             Explore Graphics
           </ActionLink>
@@ -36,18 +38,8 @@ export function Hero() {
           </ActionLink>
         </div>
 
-        <div className="relative mt-12" style={{ transform: `translateY(-${offset}px)` }}>
-          <ScreenshotSlot
-            ratio="21 / 9"
-            label="Hero screenshot slot"
-            hint="Drop a wide ATS screenshot here — desert highway at sunset works best."
-            className="shadow-lift"
-          />
-          <div className="pointer-events-none absolute inset-0 rounded-md bg-scrim opacity-40" />
-        </div>
+        <div className="pointer-events-none absolute inset-x-5 bottom-9 h-1 road-rule opacity-40 sm:inset-x-8" style={{ transform: `translateY(-${offset * 0.15}px)` }} />
       </div>
-
-      <div className="hairline-rule mx-auto w-full max-w-6xl" />
     </section>
   );
 }

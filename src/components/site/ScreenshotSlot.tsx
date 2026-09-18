@@ -28,7 +28,7 @@ export function ScreenshotSlot({
     <div
       style={{ aspectRatio: ratio }}
       className={cn(
-        "relative w-full overflow-hidden rounded-md border border-border bg-secondary",
+        "relative w-full overflow-hidden rounded-sm border border-border bg-secondary",
         className,
       )}
     >
@@ -45,7 +45,7 @@ export function ScreenshotSlot({
       ) : (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 p-6 text-center">
           {/* horizon + road hint */}
-          <div className="pointer-events-none absolute inset-0 bg-dusk opacity-80" />
+           <div className="desert-contours pointer-events-none absolute inset-0 bg-dusk opacity-90" />
           <div className="pointer-events-none absolute inset-x-0 top-1/2 h-px bg-border" />
           <div className="pointer-events-none absolute inset-x-[42%] bottom-0 top-1/2 border-x border-dashed border-border/70" />
           <div className="texture-grain-layer pointer-events-none absolute inset-0 opacity-60" />

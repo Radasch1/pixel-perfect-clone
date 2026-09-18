@@ -28,7 +28,7 @@ export function Reviews() {
       <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {[0, 1, 2].map((i) => (
           <Reveal key={i} delay={i * 90}>
-            <div className="h-full rounded-md border border-dashed border-border bg-card/60 p-6">
+            <div className="h-full border-l-4 border-dashed border-primary/50 bg-card/60 p-6">
               <PlaceholderTag>Awaiting review</PlaceholderTag>
               <div className="mt-4">
                 <Stars />
