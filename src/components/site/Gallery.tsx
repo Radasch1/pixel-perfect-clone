@@ -25,7 +25,7 @@ export function Gallery() {
 
       <div className="mt-12 grid auto-rows-[minmax(0,auto)] gap-3 sm:grid-cols-3 sm:gap-5">
         {shots.map((s, i) => (
-          <Reveal key={s.label} delay={(i % 3) * 80} className={s.span}>
+          <Reveal key={s.label} delay={(i % 3) * 80} className={`min-w-0 ${s.span}`}>
             <figure className="group h-full overflow-hidden border-b-2 border-border pb-3">
               <ScreenshotSlot
                 ratio={s.ratio}
