@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { ScreenshotSlot } from "./ScreenshotSlot";
 import { ActionLink } from "./ui";
 import heroImage from "@/assets/mojave-truck-hero.jpg";
 
@@ -14,7 +13,7 @@ export function Hero() {
 
   return (
     <section id="home" className="relative flex min-h-[82vh] items-end overflow-hidden border-b-[6px] border-leather pt-28">
-      <img src={heroImage} alt="Semi truck crossing the Mojave desert at dusk" className="absolute inset-0 h-full w-full object-cover" />
+      <img src={heroImage} alt="Semi truck crossing the Mojave desert at dusk" width={1920} height={1080} className="absolute inset-0 h-full w-full object-cover" />
       <div className="pointer-events-none absolute inset-0 bg-scrim" />
       <div className="texture-grain-layer pointer-events-none absolute inset-0 opacity-60" />
 
