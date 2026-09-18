@@ -46,10 +46,10 @@ export function Featured() {
         />
       </Reveal>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-12">
+      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-12">
         {presets.map((p, i) => (
-          <Reveal key={p.name} delay={(i % 3) * 90} as="article">
-             <div className={`group flex h-full flex-col overflow-hidden rounded-sm border border-border border-l-4 bg-card shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-l-primary hover:shadow-lift ${i === 0 || i === 5 ? "lg:col-span-8" : "lg:col-span-4"}`}>
+          <Reveal key={p.name} delay={(i % 3) * 90} as="article" className={i === 0 || i === 5 ? "lg:col-span-8" : "lg:col-span-4"}>
+             <div className="group flex h-full flex-col overflow-hidden rounded-sm border border-border border-l-4 bg-card shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-l-primary hover:shadow-lift">
               <ScreenshotSlot
                 ratio="16 / 10"
                 zoomOnHover
